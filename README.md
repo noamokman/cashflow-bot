@@ -1,0 +1,2 @@
+# cashflow-bot
+Cashflow bot
