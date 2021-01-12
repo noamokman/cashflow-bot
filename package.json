@@ -1,0 +1,55 @@
+{
+  "name": "cashflow-bot",
+  "version": "0.0.0",
+  "description": "Cashflow bot",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src --fix --ext .ts",
+    "test": "npm run lint",
+    "type-check": "tsc --noEmit",
+    "build": "rimraf dist && npm run build:js",
+    "build:js": "babel src --out-dir dist --extensions \".ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noamokman/cashflow-bot.git"
+  },
+  "keywords": [],
+  "author": "Noam Okman <noamokman@gmail.com> (https://github.com/noamokman)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/noamokman/cashflow-bot/issues"
+  },
+  "homepage": "https://github.com/noamokman/cashflow-bot#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.17.0",
+    "eslint-config-noamokman": "^10.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-unicorn": "^26.0.0",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  }
+}
