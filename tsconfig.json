@@ -6,7 +6,8 @@
     "outDir": "dist",
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include" :[
     "src/**/*.ts"

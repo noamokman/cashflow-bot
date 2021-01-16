@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint src --fix --ext .ts",
-    "test": "npm run lint",
+    "test": "npm run lint && npm run type-check",
     "start": "babel-node src/index.ts --extensions \".ts\"",
     "type-check": "tsc --noEmit",
     "build": "rimraf dist && npm run build:js",
