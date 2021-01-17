@@ -15,7 +15,10 @@ FROM base as release
 COPY --from=dependencies /service/node_modules ./node_modules
 COPY --from=dependencies /service/package.json ./package.json
 COPY --from=build /service/dist ./dist
+RUN mkdir /config
 
 ENV NODE_ENV=production
+ENV DB_PATH=/config/db.json
 
+VOLUME ["/config"]
 CMD [ "node", "dist/index.js" ]

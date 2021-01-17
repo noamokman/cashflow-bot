@@ -6,7 +6,7 @@ export const BOT_TOKEN = env.get('BOT_TOKEN')
   .asString();
 
 export const DB_PATH = env.get('DB_PATH')
-  .default('./config/db.json')
+  .required()
   .asString();
 
 export const ALLOWLIST_USERS = env.get('ALLOWLIST_USERS')
