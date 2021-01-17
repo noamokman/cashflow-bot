@@ -10,6 +10,6 @@ export const DB_PATH = env.get('DB_PATH')
   .asString();
 
 export const ALLOWLIST_USERS = env.get('ALLOWLIST_USERS')
-  .required()
+  .default('')
   .asArray()
   .map(Number.parseInt);
