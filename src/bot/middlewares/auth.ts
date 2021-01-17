@@ -9,7 +9,9 @@ const middleware: Middleware<AppContext> = async (ctx, next) => {
     return next();
   }
 
-  await ctx.reply(`User${user ? ` (${user})` : ''} is not allowed, add it to the ALLOWLIST_USERS environment variable`);
+  ctx.log.info('user not allowed tried to login');
+
+  await ctx.reply(`User${user ? ` (${user})` : ''} is not allowed, add it to the ALLOWLIST_USERS environment variable to continue`);
 };
 
 export default middleware;

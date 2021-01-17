@@ -10,7 +10,7 @@ middlewares(bot);
 commands(bot);
 
 bot.catch(async (err, ctx) => {
-  console.log(`Ooops, encountered an error for ${ctx.updateType}`, err);
+  ctx.log.error({err, updateType: ctx.updateType}, 'unexpected error occurred');
   await ctx.reply('Error occurred, please try again');
 });
 bot.start(ctx => ctx.reply('Welcome'));
