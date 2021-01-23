@@ -8,4 +8,3 @@ const adapter = new FileAsync<Database>(DB_PATH);
 const dbPromise = lowdb(adapter);
 
 export const getDb = () => dbPromise;
-

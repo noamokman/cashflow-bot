@@ -4738,6 +4738,13 @@ tar-stream@^2.1.4:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
+telegraf-inline-menu@6.0.0-alpha1:
+  version "6.0.0-alpha1"
+  resolved "https://registry.yarnpkg.com/telegraf-inline-menu/-/telegraf-inline-menu-6.0.0-alpha1.tgz#f25f9df2ef367b25cc74e9266eabc41d2f4f32c0"
+  integrity sha512-J3gic+oQTK5tBOQr1Y/JsEf12dif/7W2Grr0ZW/4KVoW1iotdXJGeDbsbJxuaBgdpj7BybBJ3dZK/ljAbKIxng==
+  dependencies:
+    typegram "^3.0.2"
+
 telegraf@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.0.1.tgz"
@@ -4877,6 +4884,11 @@ type-fest@^0.8.1:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+typegram@^3.0.2:
+  version "3.1.7"
+  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.1.7.tgz#ae8257049eb14615c8d6976ca7d81c9bb2d68587"
+  integrity sha512-8qugbkUZt8RHTVogVvUgf+s4RVMko1ABUvwEMsKEPwhHZxMRGiR1ZtqbvpOAReWIQh0NNUEUax87TNv0Czotdw==
 
 typegram@^3.1.4:
   version "3.1.5"

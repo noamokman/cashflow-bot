@@ -3,7 +3,7 @@ import type {AppContext} from '../../types';
 import logger from '../../framework/logger';
 
 const middleware: Middleware<AppContext> = (ctx, next) => {
-  ctx.log = logger.child({user: ctx.from?.id, inlineMessageId: ctx.inlineMessageId});
+  ctx.log = logger.child({user: ctx.from?.id, inlineMessageId: ctx.inlineMessageId, bot: ctx.botInfo.username});
 
   return next();
 };
