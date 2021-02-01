@@ -4744,10 +4744,10 @@ telegraf-inline-menu@6.0.0-alpha1:
   dependencies:
     typegram "^3.0.2"
 
-telegraf@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.0.1.tgz"
-  integrity sha512-kpl3vFDnIjlGxDuzNq3McUnJo9jGOlJEYtBeDPZc0Zvx878HFSO64uJeJ2HW6Tg3/76xh3dX77B7IdTGjuTOWA==
+telegraf@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.0.2.tgz#b15fde5f1f22757e9a9d226af50df172f1af1c3d"
+  integrity sha512-MTo8b6P/MMb6RbqDGXNWpCXESTihxRpTThOIPAfVBJohYQtywYl/vldjqUCdIYdg+ge8Sn/gk+OXfqHg4LewnA==
   dependencies:
     abort-controller "^3.0.0"
     debug "^4.3.1"
@@ -4884,15 +4884,10 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-typegram@^3.0.2:
+typegram@^3.0.2, typegram@^3.1.4:
   version "3.1.7"
   resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.1.7.tgz#ae8257049eb14615c8d6976ca7d81c9bb2d68587"
   integrity sha512-8qugbkUZt8RHTVogVvUgf+s4RVMko1ABUvwEMsKEPwhHZxMRGiR1ZtqbvpOAReWIQh0NNUEUax87TNv0Czotdw==
-
-typegram@^3.1.4:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.1.5.tgz"
-  integrity sha512-vHjXzIJatK1B+MYpa9kGCveC60ddctdzM631idNlJK1GNx7zG98xGeTijiRid45bZexacKbeMTx+Ptxp/Y9RHg==
 
 typescript@^4.1.3:
   version "4.1.3"
