@@ -4772,10 +4772,10 @@ tar-stream@^2.1.4:
     inherits "^2.0.3"
     readable-stream "^3.1.1"
 
-telegraf-inline-menu@6.0.0-alpha1:
-  version "6.0.0-alpha1"
-  resolved "https://registry.yarnpkg.com/telegraf-inline-menu/-/telegraf-inline-menu-6.0.0-alpha1.tgz#f25f9df2ef367b25cc74e9266eabc41d2f4f32c0"
-  integrity sha512-J3gic+oQTK5tBOQr1Y/JsEf12dif/7W2Grr0ZW/4KVoW1iotdXJGeDbsbJxuaBgdpj7BybBJ3dZK/ljAbKIxng==
+telegraf-inline-menu@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/telegraf-inline-menu/-/telegraf-inline-menu-6.0.0.tgz#9364452f33b074014c11558289bafb50befb2134"
+  integrity sha512-30H2qP6kMKFnJYKwxHlNR+mXOuL3V42MIiYubHxeve5PuT3Z7VOLCIcldgUcTu816brGFbjXPhfH5I16qZyvlA==
   dependencies:
     typegram "^3.0.2"
 
