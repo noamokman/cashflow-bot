@@ -1,15 +1,20 @@
 import 'dotenv/config';
 import env from 'env-var';
+import {version as versionFromPackage} from '../../package.json';
 
-export const BOT_TOKEN = env.get('BOT_TOKEN')
+export const botToken = env.get('BOT_TOKEN')
   .required()
   .asString();
 
-export const DB_PATH = env.get('DB_PATH')
+export const dbPath = env.get('DB_PATH')
   .required()
   .asString();
 
-export const ALLOWLIST_USERS = env.get('ALLOWLIST_USERS')
+export const allowlistUsers = env.get('ALLOWLIST_USERS')
   .default('')
   .asArray()
   .map(Number.parseInt);
+
+export const version = env.get('VERSION')
+  .default(versionFromPackage)
+  .asString();

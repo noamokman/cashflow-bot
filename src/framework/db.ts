@@ -1,9 +1,9 @@
 import lowdb from 'lowdb';
 import FileAsync from 'lowdb/adapters/FileAsync';
 import type {Database} from '../types';
-import {DB_PATH} from './environment';
+import {dbPath} from './environment';
 
-const adapter = new FileAsync<Database>(DB_PATH);
+const adapter = new FileAsync<Database>(dbPath);
 
 const dbPromise = lowdb(adapter);
 

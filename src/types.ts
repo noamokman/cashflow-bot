@@ -6,6 +6,7 @@ import type {Logger} from 'pino';
 export interface AppContext extends Context {
   db: LowdbAsync<Database>;
   log: Logger;
+  readonly match: RegExpExecArray | undefined;
 }
 
 export interface ScraperRecord {
