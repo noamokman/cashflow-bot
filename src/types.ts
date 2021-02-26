@@ -15,6 +15,16 @@ export interface ScraperRecord {
   login: Record<string, string>;
 }
 
+export interface Integration {
+  name: string;
+}
+
+export interface Credentials {
+  name: string;
+}
+
 export interface Database {
   scrapers: ScraperRecord[];
+  integrations: Integration[];
+  credentials: Credentials[];
 }
