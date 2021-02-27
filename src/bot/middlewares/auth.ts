@@ -6,6 +6,8 @@ const middleware: Middleware<AppContext> = async (ctx, next) => {
   const user = ctx.from?.id;
 
   if (user && allowlistUsers.includes(user)) {
+    ctx.userId = user;
+
     return next();
   }
 
