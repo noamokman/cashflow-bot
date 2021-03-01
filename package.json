@@ -67,6 +67,6 @@
     "lowdb": "^1.0.0",
     "pino": "^6.11.1",
     "telegraf": "^4.1.0",
-    "telegraf-inline-menu": "6.1.0"
+    "telegraf-inline-menu": "6.2.0"
   }
 }
