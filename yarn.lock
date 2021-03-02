@@ -5288,10 +5288,10 @@ telegraf-inline-menu@6.2.0:
   dependencies:
     typegram "^3.0.2"
 
-telegraf@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.1.0.tgz#b20d4aa6acdf6aab3fc054805e87633573f95928"
-  integrity sha512-Kradl4x8QjIWXbpaJYcG2Ts+2HR/C6576iskjowuJK11kvjn+TUxiJg+csPE4qQkfTHFmuCoqBBRwo2SaQsVQg==
+telegraf@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.1.1.tgz#26122477ff1c3e5b53a0d7ed8f73629392c88e03"
+  integrity sha512-VGcFfTZzjlZquBHX5VwIzhREnDHQSHV+PkirqGKXzLWun/c/qkzJKeAFc3qv5AGJBrdfNbVbHNtZT7mjpmMPtg==
   dependencies:
     abort-controller "^3.0.0"
     debug "^4.3.1"
@@ -5300,7 +5300,7 @@ telegraf@^4.1.0:
     node-fetch "^2.6.1"
     p-timeout "^4.1.0"
     sandwich-stream "^2.0.2"
-    typegram "^3.1.4"
+    typegram "^3.1.10"
 
 term-size@^2.1.0:
   version "2.2.1"
@@ -5452,10 +5452,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typegram@^3.0.2, typegram@^3.1.4:
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.1.7.tgz#ae8257049eb14615c8d6976ca7d81c9bb2d68587"
-  integrity sha512-8qugbkUZt8RHTVogVvUgf+s4RVMko1ABUvwEMsKEPwhHZxMRGiR1ZtqbvpOAReWIQh0NNUEUax87TNv0Czotdw==
+typegram@^3.0.2, typegram@^3.1.10:
+  version "3.1.10"
+  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.1.10.tgz#a0dcea705ef6386f8476dcd511a43d763d122b55"
+  integrity sha512-VfsuVP4uqk9yllRpaGp9yFpzvLKXghFCOSc3TVi+fy1IL2Bi4z2gJ9rMgVSSug4pWQP8Ui7Isvl14yYV8VEWaQ==
 
 typescript@^4.1.5:
   version "4.1.5"
