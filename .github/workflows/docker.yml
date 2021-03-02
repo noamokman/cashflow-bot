@@ -14,16 +14,17 @@ jobs:
       -
         name: Checkout
         uses: actions/checkout@v2
-          - name: Docker meta
-            id: docker_meta
-            uses: crazy-max/ghaction-docker-meta@v1
-            with:
-              # list of Docker images to use as base name for tags
-              images: |
-                noamokman/cashflow-bot
-              tag-semver: |
-                {{major}}.{{minor}}
-                {{major}}
+      -
+        name: Docker meta
+        id: docker_meta
+        uses: crazy-max/ghaction-docker-meta@v1
+        with:
+          # list of Docker images to use as base name for tags
+          images: |
+            noamokman/cashflow-bot
+          tag-semver: |
+            {{major}}.{{minor}}
+            {{major}}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
