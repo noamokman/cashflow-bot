@@ -21,7 +21,9 @@ jobs:
               # list of Docker images to use as base name for tags
               images: |
                 noamokman/cashflow-bot
-              tag-semver: true
+              tag-semver: |
+                {{major}}.{{minor}}
+                {{major}}
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
