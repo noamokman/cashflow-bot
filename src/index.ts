@@ -2,8 +2,17 @@ import handleGraceful from './framework/handleGraceful';
 import logger from './framework/logger';
 import bot from './bot';
 
-void bot.launch();
+const startup = async () => {
+  await bot.telegram.setMyCommands([
+    {command: 'main', description: 'display the main menu'},
+    {command: 'help', description: 'help message'}
+  ]);
 
-logger.info('Bot started!', {bot: bot.botInfo?.username});
+  await bot.launch();
 
-handleGraceful(bot);
+  logger.info('Bot started!', {bot: bot.botInfo?.username});
+
+  handleGraceful(bot);
+};
+
+void startup();
