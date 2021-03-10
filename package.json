@@ -1,6 +1,6 @@
 {
   "name": "cashflow-bot",
-  "version": "0.1.411",
+  "version": "0.1.412",
   "description": "Cashflow bot",
   "main": "dist/index.js",
   "private": true,
