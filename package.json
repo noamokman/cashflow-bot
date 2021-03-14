@@ -58,7 +58,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "env-var": "^7.0.0",
-    "israeli-bank-scrapers": "1.0.1",
+    "israeli-bank-scrapers": "1.0.3",
     "lowdb": "^1.0.0",
     "pino": "^6.11.1",
     "telegraf": "^4.1.2",
