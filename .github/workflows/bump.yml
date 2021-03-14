@@ -20,3 +20,5 @@ jobs:
        uses: "phips28/gh-action-bump-version@master"
        env:
          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+       with:
+         commit-message: 'ci: bumps version to {{version}} [skip ci]'
