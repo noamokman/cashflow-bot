@@ -5311,10 +5311,10 @@ telegraf-stateless-question@^2.0.0:
   dependencies:
     telegram-format "^2.0.0"
 
-telegraf@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.1.2.tgz#bfc1e798a2018cf7b6804ab07ee230161cee01b5"
-  integrity sha512-YZljmryOhcZgrRWU28AV7UhZ3y+jKRwPwB49PSDDmW7tKtQHrSLBkW0pCoLniDlQVz+ICBGCWXZlHfqDkQ2iNQ==
+telegraf@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/telegraf/-/telegraf-4.2.1.tgz#0346ecacef3308450b03b8ef2a2c0afcd9339f6d"
+  integrity sha512-tSww8MY+XmT2K3Kq0Y7drGjpl36AQQEg0WWBUByfFcbG6ChiIgOFycPMkB+g5jSL+RqaP7QA4EybAztmI1227g==
   dependencies:
     abort-controller "^3.0.0"
     debug "^4.3.1"
@@ -5324,7 +5324,7 @@ telegraf@^4.1.2:
     p-timeout "^4.1.0"
     safe-compare "^1.1.4"
     sandwich-stream "^2.0.2"
-    typegram "^3.1.10"
+    typegram "^3.2.0"
 
 telegram-format@^2.0.0:
   version "2.0.1"
@@ -5481,10 +5481,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typegram@^3.0.2, typegram@^3.1.10:
-  version "3.1.10"
-  resolved "https://registry.npmjs.org/typegram/-/typegram-3.1.10.tgz"
-  integrity sha512-VfsuVP4uqk9yllRpaGp9yFpzvLKXghFCOSc3TVi+fy1IL2Bi4z2gJ9rMgVSSug4pWQP8Ui7Isvl14yYV8VEWaQ==
+typegram@^3.0.2, typegram@^3.2.0:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/typegram/-/typegram-3.2.2.tgz#e6da8b5f17d34271e132c6e4fe1b3c28c7981462"
+  integrity sha512-PC7MclSZcLnCEnflubX61/YEwZph98EHbCsrL9tFhU5bZYz3uXm3Mc6iseKjiS3VyKOCCyoT3A4ZDtPkoYyucg==
 
 typescript@^4.2.3:
   version "4.2.3"
