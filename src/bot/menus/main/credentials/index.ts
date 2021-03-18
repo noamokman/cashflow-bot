@@ -1,11 +1,10 @@
 import {createBackMainMenuButtons, MenuTemplate} from 'telegraf-inline-menu';
 import type {AppContext} from '../../../../types';
+import addSubmenu from './add';
 
 const menuTemplate = new MenuTemplate<AppContext>('Credentials');
 
-menuTemplate.interact('Add credentials', 'unique', {
-  do: async ctx => ctx.answerCbQuery('You hit a button in a submenu')
-});
+menuTemplate.submenu('➕ Add credentials', 'add', addSubmenu);
 
 menuTemplate.manualRow(createBackMainMenuButtons());
 

@@ -22,4 +22,8 @@ export interface Database {
   scrapers: ScraperRecord[];
   integrations: Integration[];
   credentials: Credentials[];
+  ongoing: {
+    integration: Partial<Integration>;
+    credentials: Partial<Credentials>;
+  };
 }
