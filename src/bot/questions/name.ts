@@ -5,9 +5,9 @@ import type {AppContext} from '../../types';
 import menuTemplate from '../menus/main/template';
 
 export const nameQuestion = new TelegrafStatelessQuestion<AppContext>('name', async (ctx, additionalState) => {
-  const answer = ctx.message.text;
+  const {text} = ctx.message as {text?: string};
 
-  console.log(answer, additionalState);
+  console.log(text, additionalState);
 
 
   await replyMenuToContext(menuTemplate, ctx, additionalState);
