@@ -5,6 +5,24 @@ import {dbPath} from './environment';
 
 const adapter = new FileAsync<Database>(dbPath);
 
-const dbPromise = lowdb(adapter);
+const createDB = async () => {
+  const db = await lowdb(adapter);
+
+  const defaultDB: Database = {
+    scrapers: [],
+    integrations: [],
+    credentials: [],
+    ongoing: {
+      integration: {},
+      credentials: {}
+    }
+  };
+
+  await db.defaultsDeep(defaultDB).write();
+
+  return db;
+};
+
+const dbPromise = createDB();
 
 export const getDb = () => dbPromise;

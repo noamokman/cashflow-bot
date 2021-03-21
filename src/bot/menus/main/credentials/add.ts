@@ -1,13 +1,27 @@
-import {createBackMainMenuButtons, MenuTemplate} from 'telegraf-inline-menu';
+import {createBackMainMenuButtons, deleteMenuFromContext, getMenuOfPath, MenuTemplate} from 'telegraf-inline-menu';
 import {SCRAPERS} from 'israeli-bank-scrapers';
 import type {AppContext} from '../../../../types';
+import {getOngoingCredentials} from '../../../../services/credentials';
+import {nameQuestion} from '../../../questions/name';
 
 const menuTemplate = new MenuTemplate<AppContext>('➕ Add credentials');
 
 const submenuTemplate = new MenuTemplate<AppContext>(ctx => `Add a new ${ctx.match?.[1]} credentials`);
 
-submenuTemplate.interact('Name?', 'name', {
-  do: async ctx => ctx.answerCbQuery('You hit a button in a submenu')
+submenuTemplate.interact(ctx => {
+  const {name} = getOngoingCredentials(ctx);
+
+  return name ? `Name: ${name}` : 'Name?';
+}, 'name', {
+  async do (ctx, path) {
+    const text = 'Choose a name for a new credentials';
+    const additionalState = getMenuOfPath(path);
+
+    await nameQuestion.replyWithMarkdown(ctx, text, additionalState);
+    await deleteMenuFromContext(ctx);
+
+    return false;
+  }
 });
 
 submenuTemplate.select('login', ctx => {
@@ -20,9 +34,9 @@ submenuTemplate.select('login', ctx => {
   return SCRAPERS[key].loginFields;
 }, {
   async isSet (ctx, loginField) {
-    console.log(ctx, loginField);
+    const {login} = getOngoingCredentials(ctx);
 
-    return loginField === '';
+    return !!login?.[loginField];
   },
   set: (ctx, loginField) => {
     console.log(ctx, loginField);
