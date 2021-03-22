@@ -1,16 +1,14 @@
 import TelegrafStatelessQuestion from 'telegraf-stateless-question';
 import type {Telegraf} from 'telegraf';
-import {replyMenuToContext} from 'telegraf-inline-menu';
 import type {AppContext} from '../../types';
-import menuTemplate from '../menus/main/template';
+import {menuMiddleware} from '../menus/main';
+import {assignOngoingCredentials} from '../../services/credentials';
 
 export const nameQuestion = new TelegrafStatelessQuestion<AppContext>('name', async (ctx, additionalState) => {
   const {text} = ctx.message as {text?: string};
 
-  console.log(text, additionalState);
-
-
-  await replyMenuToContext(menuTemplate, ctx, additionalState);
+  await assignOngoingCredentials(ctx, {name: text});
+  await menuMiddleware.replyToContext(ctx, additionalState);
 });
 
 export default (bot: Telegraf<AppContext>) => {
