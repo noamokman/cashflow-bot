@@ -1,5 +1,5 @@
 import type {Telegraf} from 'telegraf';
-import type {AppContext} from '../types';
+import type {AppContext} from '../types/index.js';
 
 export default (bot: Telegraf<AppContext>) => {
   bot.on('text', async ctx => {

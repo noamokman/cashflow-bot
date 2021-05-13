@@ -1,4 +1,4 @@
-import type {Entity} from './entity';
+import type {Entity} from './entity.js';
 
 export interface BaseIntegration<Type=string, Payload={}> extends Entity {
   type: Type;

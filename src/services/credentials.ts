@@ -1,5 +1,5 @@
-import type {AppContext} from '../types';
-import type {Credentials} from '../types/credentials';
+import type {AppContext} from '../types/index.js';
+import type {Credentials} from '../types/credentials.js';
 
 export const getOngoingCredentials = (ctx: AppContext) => ctx.db.get('ongoing').value().credentials;
 

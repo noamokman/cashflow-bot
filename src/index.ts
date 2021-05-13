@@ -1,6 +1,6 @@
-import handleGraceful from './framework/handleGraceful';
-import logger from './framework/logger';
-import bot from './bot';
+import handleGraceful from './framework/handleGraceful.js';
+import logger from './framework/logger.js';
+import bot from './bot/index.js';
 
 const startup = async () => {
   await bot.telegram.setMyCommands([

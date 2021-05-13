@@ -1,6 +1,5 @@
 import 'dotenv/config';
 import env from 'env-var';
-import {version as versionFromPackage} from '../../package.json';
 
 export const botToken = env.get('BOT_TOKEN')
   .required()
@@ -14,7 +13,3 @@ export const allowlistUsers = env.get('ALLOWLIST_USERS')
   .default('')
   .asArray()
   .map(Number.parseInt);
-
-export const version = env.get('VERSION')
-  .default(versionFromPackage)
-  .asString();

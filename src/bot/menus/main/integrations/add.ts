@@ -1,5 +1,5 @@
 import {createBackMainMenuButtons, MenuTemplate} from 'telegraf-inline-menu';
-import type {AppContext} from '../../../../types';
+import type {AppContext} from '../../../../types/index.js';
 
 const menuTemplate = new MenuTemplate<AppContext>('➕ Add an integration');
 

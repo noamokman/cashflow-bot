@@ -1,8 +1,8 @@
 import {createBackMainMenuButtons, deleteMenuFromContext, getMenuOfPath, MenuTemplate} from 'telegraf-inline-menu';
 import {SCRAPERS} from 'israeli-bank-scrapers';
-import type {AppContext} from '../../../../types';
-import {getOngoingCredentials} from '../../../../services/credentials';
-import {nameQuestion} from '../../../questions/name';
+import type {AppContext} from '../../../../types/index.js';
+import {getOngoingCredentials} from '../../../../services/credentials.js';
+import {nameQuestion} from '../../../questions/name.js';
 
 const menuTemplate = new MenuTemplate<AppContext>('➕ Add credentials');
 

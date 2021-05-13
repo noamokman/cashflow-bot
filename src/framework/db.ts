@@ -1,7 +1,7 @@
 import lowdb from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync';
-import type {Database} from '../types';
-import {dbPath} from './environment';
+import FileAsync from 'lowdb/adapters/FileAsync.js';
+import type {Database} from '../types/index.js';
+import {dbPath} from './environment.js';
 
 const adapter = new FileAsync<Database>(dbPath);
 

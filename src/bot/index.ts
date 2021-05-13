@@ -1,12 +1,12 @@
 import {Telegraf} from 'telegraf';
-import {botToken} from '../framework/environment';
-import type {AppContext} from '../types';
-import middlewares from './middlewares';
-import menus from './menus';
-import commands from './commands';
-import help from './help';
-import text from './text';
-import questions from './questions';
+import {botToken} from '../framework/environment.js';
+import type {AppContext} from '../types/index.js';
+import middlewares from './middlewares/index.js';
+import menus from './menus/index.js';
+import commands from './commands/index.js';
+import help from './help.js';
+import text from './text.js';
+import questions from './questions/index.js';
 
 const bot = new Telegraf<AppContext>(botToken);
 

@@ -2,9 +2,9 @@ import type {CompanyTypes} from 'israeli-bank-scrapers';
 import type {Context} from 'telegraf';
 import type {LowdbAsync} from 'lowdb';
 import type {Logger} from 'pino';
-import type {Entity} from './entity';
-import type {Integration} from './integrations';
-import type {Credentials} from './credentials';
+import type {Entity} from './entity.js';
+import type {Integration} from './integrations.js';
+import type {Credentials} from './credentials.js';
 
 export interface AppContext extends Context {
   db: LowdbAsync<Database>;

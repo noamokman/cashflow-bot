@@ -1,6 +1,6 @@
 import type {Middleware} from 'telegraf';
-import {allowlistUsers} from '../../framework/environment';
-import type {AppContext} from '../../types';
+import {allowlistUsers} from '../../framework/environment.js';
+import type {AppContext} from '../../types/index.js';
 
 const middleware: Middleware<AppContext> = async (ctx, next) => {
   const user = ctx.from?.id;
