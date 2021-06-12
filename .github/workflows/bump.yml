@@ -2,8 +2,10 @@ name: "Bump Version"
 
 on:
   push:
-    branches:
-      - main
+    paths-ignore:
+      - ".github/**"
+      - "README.md"
+    branches: [main]
 
 jobs:
   bump-version:
@@ -20,3 +22,5 @@ jobs:
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        with:
+          tag-prefix: "v"

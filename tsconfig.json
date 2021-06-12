@@ -4,12 +4,12 @@
     "lib": ["esnext"],
     "module": "ES2020",
     "moduleResolution": "Node",
-    "declaration": true,
     "outDir": "dist",
+    "removeComments": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
+    "resolveJsonModule": false,
     "skipLibCheck": true
   },
   "include" :[
