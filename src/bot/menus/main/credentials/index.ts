@@ -1,5 +1,5 @@
-import {createBackMainMenuButtons, MenuTemplate} from 'telegraf-inline-menu';
-import type {AppContext} from '../../../../types/index.js';
+import { createBackMainMenuButtons, MenuTemplate } from 'telegraf-inline-menu';
+import type { AppContext } from '../../../../types/index.js';
 import addSubmenu from './add.js';
 
 const menuTemplate = new MenuTemplate<AppContext>('Credentials');

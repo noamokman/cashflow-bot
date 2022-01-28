@@ -1,13 +1,13 @@
-import type {CompanyTypes} from 'israeli-bank-scrapers';
-import type {Context} from 'telegraf';
-import type {LowdbAsync} from 'lowdb';
-import type {Logger} from 'pino';
-import type {Entity} from './entity.js';
-import type {Integration} from './integrations.js';
-import type {Credentials} from './credentials.js';
+import type { CompanyTypes } from 'israeli-bank-scrapers';
+import type { Context } from 'telegraf';
+import type { Low } from 'lowdb';
+import type { Logger } from 'pino';
+import type { Entity } from './entity.js';
+import type { Integration } from './integrations.js';
+import type { Credentials } from './credentials.js';
 
 export interface AppContext extends Context {
-  db: LowdbAsync<Database>;
+  db: Low<Database>;
   log: Logger;
   readonly match: RegExpExecArray | undefined;
   userId: number;

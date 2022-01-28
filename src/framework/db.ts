@@ -1,12 +1,14 @@
-import lowdb from 'lowdb';
-import FileAsync from 'lowdb/adapters/FileAsync.js';
-import type {Database} from '../types/index.js';
-import {dbPath} from './environment.js';
+import { Low, JSONFile } from 'lowdb';
+import { merge } from 'lodash-es';
+import type { Database } from '../types/index.js';
+import { dbPath } from './environment.js';
 
-const adapter = new FileAsync<Database>(dbPath);
+const adapter = new JSONFile<Database>(dbPath);
 
 const createDB = async () => {
-  const db = await lowdb(adapter);
+  const db = new Low(adapter);
+
+  await db.read();
 
   const defaultDB: Database = {
     scrapers: [],
@@ -14,11 +16,13 @@ const createDB = async () => {
     credentials: [],
     ongoing: {
       integration: {},
-      credentials: {}
-    }
+      credentials: {},
+    },
   };
 
-  await db.defaultsDeep(defaultDB).write();
+  db.data = merge(defaultDB, db.data);
+
+  await db.write();
 
   return db;
 };
