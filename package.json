@@ -36,7 +36,7 @@
     "*.{ts,js,json}": "prettier --write"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.8",
+    "@babel/cli": "^7.17.6",
     "@babel/core": "^7.16.12",
     "@babel/node": "^7.16.8",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
