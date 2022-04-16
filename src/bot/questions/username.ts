@@ -1,13 +1,13 @@
-import TelegrafStatelessQuestion from 'telegraf-stateless-question';
-import type { Telegraf } from 'telegraf';
-import { replyMenuToContext } from 'telegraf-inline-menu';
+import { StatelessQuestion } from '@grammyjs/stateless-question';
+import type { Bot } from 'grammy';
+import { replyMenuToContext } from 'grammy-inline-menu';
 import type { AppContext } from '../../types/index.js';
 import menuTemplate from '../menus/main/template.js';
 
-export const usernameQuestion = new TelegrafStatelessQuestion<AppContext>('username', async (ctx, additionalState) => {
+export const usernameQuestion = new StatelessQuestion<AppContext>('username', async (ctx, additionalState) => {
   await replyMenuToContext(menuTemplate, ctx, additionalState);
 });
 
-export default (bot: Telegraf<AppContext>) => {
+export default (bot: Bot<AppContext>) => {
   bot.use(usernameQuestion.middleware());
 };

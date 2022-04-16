@@ -1,4 +1,4 @@
-import { createBackMainMenuButtons, MenuTemplate } from 'telegraf-inline-menu';
+import { createBackMainMenuButtons, MenuTemplate } from 'grammy-inline-menu';
 import type { AppContext } from '../../../../types/index.js';
 
 const menuTemplate = new MenuTemplate<AppContext>('➕ Add an integration');
@@ -6,7 +6,7 @@ const menuTemplate = new MenuTemplate<AppContext>('➕ Add an integration');
 const submenuTemplate = new MenuTemplate<AppContext>((ctx) => `Add a new ${ctx.match?.[1]} integration`);
 
 submenuTemplate.interact('Set cron text', 'unique', {
-  do: async (ctx) => ctx.answerCbQuery('You hit a button in a submenu'),
+  do: async (ctx) => ctx.answerCallbackQuery('You hit a button in a submenu'),
 });
 submenuTemplate.manualRow(createBackMainMenuButtons());
 

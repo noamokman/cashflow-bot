@@ -1,12 +1,17 @@
 import { Low, JSONFile } from 'lowdb';
-import { merge } from 'lodash-es';
+import type { ExpChain } from 'lodash';
+import { merge, chain } from 'lodash-es';
 import type { Database } from '../types/index.js';
 import { dbPath } from './environment.js';
 
 const adapter = new JSONFile<Database>(dbPath);
 
+export class LowWithLodash<T> extends Low<T> {
+  chain: ExpChain<this['data']> = chain(this).get('data');
+}
+
 const createDB = async () => {
-  const db = new Low(adapter);
+  const db = new LowWithLodash(adapter);
 
   await db.read();
 

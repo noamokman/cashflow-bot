@@ -1,7 +1,9 @@
-import type { Telegraf } from 'telegraf';
+import type { Bot } from 'grammy';
 import type { AppContext } from '../../types/index.js';
-import main from './main.js';
+import { main } from './main.js';
+import { help } from './help.js';
 
-export default (bot: Telegraf<AppContext>) => {
+export const commands = (bot: Bot<AppContext>) => {
   bot.command('main', main);
+  bot.command('help', help);
 };

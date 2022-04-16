@@ -1,4 +1,4 @@
-import { createBackMainMenuButtons, MenuTemplate } from 'telegraf-inline-menu';
+import { createBackMainMenuButtons, MenuTemplate } from 'grammy-inline-menu';
 import type { AppContext } from '../../../../types/index.js';
 import addSubmenu from './add.js';
 

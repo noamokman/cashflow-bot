@@ -1,4 +1,4 @@
-import { createBackMainMenuButtons, MenuTemplate } from 'telegraf-inline-menu';
+import { createBackMainMenuButtons, MenuTemplate } from 'grammy-inline-menu';
 import type { AppContext } from '../../../../types/index.js';
 import { getUserIntegrations } from '../../../../services/integrations.js';
 import addSubmenu from './add.js';
@@ -15,7 +15,7 @@ menuTemplate.interact(
   },
   'list',
   {
-    do: async (ctx) => ctx.answerCbQuery('You hit a button in a submenu'),
+    do: async (ctx) => ctx.answerCallbackQuery('You hit a button in a submenu'),
   },
 );
 

@@ -1,8 +1,8 @@
-import type { Middleware } from 'telegraf';
+import type { Middleware } from 'grammy';
 import { allowlistUsers } from '../../framework/environment.js';
 import type { AppContext } from '../../types/index.js';
 
-const middleware: Middleware<AppContext> = async (ctx, next) => {
+export const auth: Middleware<AppContext> = async (ctx, next) => {
   const user = ctx.from?.id;
 
   if (user && allowlistUsers.includes(user)) {
@@ -15,5 +15,3 @@ const middleware: Middleware<AppContext> = async (ctx, next) => {
 
   await ctx.reply(`User${user ? ` (${user})` : ''} is not allowed, add it to the ALLOWLIST_USERS environment variable to continue`);
 };
-
-export default middleware;

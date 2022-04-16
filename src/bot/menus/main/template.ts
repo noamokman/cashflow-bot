@@ -1,4 +1,4 @@
-import { deleteMenuFromContext, MenuTemplate } from 'telegraf-inline-menu';
+import { deleteMenuFromContext, MenuTemplate } from 'grammy-inline-menu';
 import { readPackageUp } from 'read-pkg-up';
 import type { AppContext } from '../../../types/index.js';
 import integrations from './integrations/index.js';

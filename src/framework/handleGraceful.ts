@@ -1,11 +1,11 @@
-import type { Telegraf } from 'telegraf';
+import type { Bot } from 'grammy';
 import type { AppContext } from '../types/index.js';
 
-export default (bot: Telegraf<AppContext>) => {
-  process.once('SIGINT', () => {
-    bot.stop('SIGINT');
-  });
-  process.once('SIGTERM', () => {
-    bot.stop('SIGTERM');
-  });
+export const handleGraceful = (bot: Bot<AppContext>) => {
+  const stopBot = () => {
+    void bot.stop();
+  };
+
+  process.once('SIGINT', stopBot);
+  process.once('SIGTERM', stopBot);
 };

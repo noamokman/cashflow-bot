@@ -1,4 +1,4 @@
-import { createBackMainMenuButtons, deleteMenuFromContext, getMenuOfPath, MenuTemplate } from 'telegraf-inline-menu';
+import { createBackMainMenuButtons, deleteMenuFromContext, getMenuOfPath, MenuTemplate } from 'grammy-inline-menu';
 import { SCRAPERS } from 'israeli-bank-scrapers';
 import type { AppContext } from '../../../../types/index.js';
 import { getOngoingCredentials } from '../../../../services/credentials.js';
@@ -54,7 +54,7 @@ submenuTemplate.select(
 );
 
 submenuTemplate.interact('Save', 'save', {
-  do: async (ctx) => ctx.answerCbQuery('You hit a button in a submenu'),
+  do: async (ctx) => ctx.answerCallbackQuery('You hit a button in a submenu'),
 });
 
 submenuTemplate.manualRow(createBackMainMenuButtons());
