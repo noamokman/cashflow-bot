@@ -8,7 +8,7 @@ RUN yarn --frozen-lockfile --production true
 FROM dependencies as build
 RUN yarn --frozen-lockfile --production false
 COPY ./src ./src/
-COPY tsconfig.json .babelrc ./
+COPY tsconfig.json ./
 RUN yarn build
 
 FROM base as release

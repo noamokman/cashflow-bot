@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2018",
     "lib": ["esnext"],
-    "module": "ES2020",
+    "module": "esnext",
     "moduleResolution": "Node",
     "outDir": "dist",
     "removeComments": true,
