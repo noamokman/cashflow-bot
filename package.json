@@ -60,7 +60,7 @@
     "env-var": "^7.1.1",
     "grammy": "^1.8.0",
     "grammy-inline-menu": "^7.0.2",
-    "israeli-bank-scrapers": "^1.13.0",
+    "israeli-bank-scrapers": "^1.13.1",
     "lodash-es": "^4.17.21",
     "lowdb": "^3.0.0",
     "node-schedule": "^2.1.0",
