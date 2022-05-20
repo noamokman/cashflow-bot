@@ -1,11 +1,13 @@
 import type { Bot } from 'grammy';
+import { gracefulShutdown } from 'node-schedule';
 import type { AppContext } from '../types/index.js';
 
 export const handleGraceful = (bot: Bot<AppContext>) => {
-  const stopBot = () => {
-    void bot.stop();
+  const shutdown = async () => {
+    await gracefulShutdown();
+    await bot.stop();
   };
 
-  process.once('SIGINT', stopBot);
-  process.once('SIGTERM', stopBot);
+  process.once('SIGINT', shutdown);
+  process.once('SIGTERM', shutdown);
 };

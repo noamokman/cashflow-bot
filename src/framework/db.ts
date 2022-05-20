@@ -16,7 +16,6 @@ const createDB = async () => {
   await db.read();
 
   const defaultDB: Database = {
-    scrapers: [],
     integrations: [],
     credentials: [],
     ongoing: {
