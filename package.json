@@ -1,13 +1,13 @@
 {
   "name": "cashflow-bot",
-  "version": "0.4.16",
+  "version": "0.4.17",
   "description": "Cashflow bot",
   "exports": "./dist/index.js",
   "type": "module",
   "private": true,
   "scripts": {
     "lint": "eslint . --fix --ext .ts",
-    "test": "npm run lint && npm run type-check",
+    "test": "yarn lint && yarn build",
     "start": "ts-node --esm src/index.ts",
     "start:prod": "node dist/index.js",
     "start:dev": "nodemon",
