@@ -1,4 +1,4 @@
-import 'dotenv/config';
+import 'dotenv/config.js';
 import env from 'env-var';
 
 export const botToken = env.get('BOT_TOKEN').required().asString();

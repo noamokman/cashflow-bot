@@ -15,6 +15,7 @@ commands(bot);
 questions(bot);
 text(bot);
 
+// eslint-disable-next-line unicorn/prefer-top-level-await
 bot.catch(async ({ error, ctx }) => {
   ctx.log.error({ err: error, updateId: ctx.update.update_id }, 'unexpected error occurred');
   await ctx.reply('Error occurred, please try again');
